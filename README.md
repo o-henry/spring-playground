@@ -13,4 +13,13 @@ cmd + shift + p → Create a Maven OR Gradle Project
 ./gradlew
 ./gradlew jar
 ./gradlew bootRun
+
+# import
+cmd + .
+
+# reload vscode
+cmd + shift + p
+
+# setting vscode
+cmd + ,
 ```
