@@ -22,4 +22,13 @@ cmd + shift + p
 
 # setting vscode
 cmd + ,
+
+# port
+sudo lsof -i :8080
+sudo kill -9 <pid>
+
+or
+
+resuorces/application.properties server.port=xxxx
 ```
+
