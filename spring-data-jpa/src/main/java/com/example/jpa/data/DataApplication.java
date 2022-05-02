@@ -20,26 +20,25 @@ public class DataApplication {
   @Bean
   public CommandLineRunner demo(CustomerRepository repository) {
     return (args) -> {
-      repository.save(new Customer("Jack", "Bauer"));
-      repository.save(new Customer("Chloe", "o'Brian"));
-      repository.save(new Customer("Kim", "Bauer"));
-      repository.save(new Customer("David", "Palmer"));
-      repository.save(new Customer("Michelle", "Dessler"));
-
-      log.info("Customers found with findAll():");
-      log.info("-------------------------------");
-      repository.findAll().forEach((customer) -> {
-        log.info(customer.toString());
-      });
-
-      log.info("");
-
-      log.info("Customer found with findByLastName('Bauer'):");
-      log.info("--------------------------------------------");
-      repository.findByLastName("Bauer").forEach(bauer -> {
-        log.info(bauer.toString());
-      });
-      log.info("");
+//      repository.save(new Customer("Jack", "Bauer", "jack@gmail.com"));
+//      repository.save(new Customer("Chloe", "o'Brian", "chole@gmail.com"));
+//      repository.save(new Customer("Kim", "Bauer", "Kim@gmail.com"));
+//      repository.save(new Customer("David", "Palmer", "David@gmail.com"));
+//      repository.save(new Customer("Michelle", "Dessler", "Michlle@gmail.com"));
+//      log.info("Customers found with findAll():");
+//      log.info("-------------------------------");
+//      repository.findAll().forEach((customer) -> {
+//        log.info(customer.toString());
+//      });
+//
+//      log.info("");
+//
+//      log.info("Customer found with findByLastName('Bauer'):");
+//      log.info("--------------------------------------------");
+//      repository.findByLastName("Bauer").forEach(bauer -> {
+//        log.info(bauer.toString());
+//      });
+//      log.info("");
     };
   }
 }

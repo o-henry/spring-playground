@@ -31,6 +31,11 @@
       <artifactId>mysql-connector-java</artifactId>
       <groupId>mysql</groupId>
     </dependency>
+    <dependency>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <version>2.6.6</version>
+    </dependency>
   </dependencies>
   <description>Demo project for Spring Boot</description>
   <groupId>com.example.jpa</groupId>

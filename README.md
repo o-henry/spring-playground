@@ -49,4 +49,8 @@ f. Let's say, you pickup Spring MVC - then look for some decent examples on the 
 g. Then refactor that spring version with spring boot. Observe, takes notes.
 h. Repeat.
 
+
+# data
+Better still, use a dedicated migration tool, such as Flyway or Liquibase.
+
 ```
