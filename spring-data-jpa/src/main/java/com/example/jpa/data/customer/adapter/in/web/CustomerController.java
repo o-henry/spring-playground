@@ -1,5 +1,7 @@
-package com.example.jpa.data;
+package com.example.jpa.data.customer.adapter.in.web;
 
+import com.example.jpa.data.customer.adapter.out.persistence.CustomerRepository;
+import com.example.jpa.data.customer.domain.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping(path = "demo")
-public class MainController {
+public class CustomerController {
 
   @Autowired
   private CustomerRepository customerRepository;

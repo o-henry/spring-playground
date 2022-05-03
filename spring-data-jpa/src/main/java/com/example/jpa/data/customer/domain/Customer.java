@@ -1,4 +1,4 @@
-package com.example.jpa.data;
+package com.example.jpa.data.customer.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,7 +28,7 @@ public class Customer {
   private String email;
 
   // JPA를 위해서 존재하는 생성자
-  protected Customer() {
+  public Customer() {
   }
 
   ;

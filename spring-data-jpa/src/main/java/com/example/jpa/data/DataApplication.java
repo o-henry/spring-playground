@@ -1,5 +1,6 @@
 package com.example.jpa.data;
 
+import com.example.jpa.data.customer.adapter.out.persistence.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
