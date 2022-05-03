@@ -18,8 +18,8 @@ public class UserController {
   private UserRepository userRepository;
 
   @PostMapping(path = "/add")
-  public @ResponseBody String addNewUser(@RequestParam String firstName,
-      @RequestParam String lastName, @RequestParam String email) {
+  public @ResponseBody String addNewUser(
+      @RequestParam String name, @RequestParam String email) {
     User user = new User();
 
     //TODO: add setter by value-object
