@@ -1,4 +1,4 @@
-package com.example.jpa.data.customer.domain;
+package com.example.jpa.data.user.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,55 +11,47 @@ import javax.persistence.Table;
 // *(Table이나 column이 없는 상태) → rdbms 와 연결하지 않았으므로 in-memory 에 저장된다
 @Entity // This Tells Hibernate to make a table out of this class
 @Table(name = "customer")
-public class Customer {
+public class User {
 
   @Id // annotation을 통해 JPA가 이를 객체의 ID로 인식합니다.
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
 
 
-  @Column(name = "first_name", nullable = false)
-  private String firstName;
-
-  @Column(name = "last_name", nullable = false)
-  private String lastName;
+  @Column(name = "name", nullable = false)
+  private String name;
 
   @Column(name = "email", nullable = false)
   private String email;
 
   // JPA를 위해서 존재하는 생성자
-  public Customer() {
+  public User() {
   }
 
-  ;
 
-  // DB에 저장할 Customer 인스턴스를 생성하는 생성자
+  // DB에 저장할 User 인스턴스를 생성하는 생성자
   // default-value를 추가하고싶다면 builder pattern을 사용해야 한다.
-  public Customer(String firstName, String lastName, String email) {
-    this.firstName = firstName;
-    this.lastName = lastName;
+  public User(String name, String email) {
+    this.name = name;
     this.email = email;
+
   }
 
   @Override
   public String toString() {
     return String.format(
-        "Customer[id=%d, firstName='%s', lastName='%s', email='%s']",
-        id, firstName, lastName, email);
+        "User[id=%d, name='%s', email='%s']",
+        id, name, email);
   }
 
   public Integer getId() {
     return id;
   }
 
-  public String getFirstName() {
-    return firstName;
+  public String getName() {
+    return name;
   }
 
-
-  public String getLastName() {
-    return lastName;
-  }
 
   public String getEmail() {
     return email;

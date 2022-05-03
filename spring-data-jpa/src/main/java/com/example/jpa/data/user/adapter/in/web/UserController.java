@@ -1,7 +1,7 @@
-package com.example.jpa.data.customer.adapter.in.web;
+package com.example.jpa.data.user.adapter.in.web;
 
-import com.example.jpa.data.customer.adapter.out.persistence.CustomerRepository;
-import com.example.jpa.data.customer.domain.Customer;
+import com.example.jpa.data.user.adapter.out.persistence.UserRepository;
+import com.example.jpa.data.user.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,27 +12,27 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping(path = "demo")
-public class CustomerController {
+public class UserController {
 
   @Autowired
-  private CustomerRepository customerRepository;
+  private UserRepository userRepository;
 
   @PostMapping(path = "/add")
-  public @ResponseBody String addNewCustomer(@RequestParam String firstName,
+  public @ResponseBody String addNewUser(@RequestParam String firstName,
       @RequestParam String lastName, @RequestParam String email) {
-    Customer customer = new Customer();
+    User user = new User();
 
     //TODO: add setter by value-object
     //TODO: need to show error log
     //SCENARIO: if a lastName is not provided, you must provide information that it is missing.
 
-    customerRepository.save(customer);
+    userRepository.save(user);
     return "Saved";
   }
 
   @GetMapping(path = "/all")
-  public @ResponseBody Iterable<Customer> getAllCustomers() {
-    return customerRepository.findAll();
+  public @ResponseBody Iterable<User> getAllUsers() {
+    return userRepository.findAll();
   }
 }
 

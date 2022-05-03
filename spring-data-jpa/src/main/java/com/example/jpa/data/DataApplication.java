@@ -1,6 +1,6 @@
 package com.example.jpa.data;
 
-import com.example.jpa.data.customer.adapter.out.persistence.CustomerRepository;
+import com.example.jpa.data.user.adapter.out.persistence.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -19,7 +19,7 @@ public class DataApplication {
 
   // The demo() method returns a CommandLineRunner bean that automatically runs the code when the application launches
   @Bean
-  public CommandLineRunner demo(CustomerRepository repository) {
+  public CommandLineRunner demo(UserRepository repository) {
     return (args) -> {
 //      repository.save(new Customer("Jack", "Bauer", "jack@gmail.com"));
 //      repository.save(new Customer("Chloe", "o'Brian", "chole@gmail.com"));
