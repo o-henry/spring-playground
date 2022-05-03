@@ -22,9 +22,7 @@ public class MainController {
 
     //TODO: add setter by value-object
     //TODO: need to show error log
-    /**
-     * scenario: if a lastName is not provided, you must provide information that it is missing.
-     * */
+    //SCENARIO: if a lastName is not provided, you must provide information that it is missing.
 
     customerRepository.save(customer);
     return "Saved";

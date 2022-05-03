@@ -53,4 +53,7 @@ h. Repeat.
 # data
 Better still, use a dedicated migration tool, such as Flyway or Liquibase.
 
+# docker
+1. run docker app
+2. docker-compose up -d
 ```
