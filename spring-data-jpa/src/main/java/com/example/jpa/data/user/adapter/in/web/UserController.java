@@ -2,6 +2,7 @@ package com.example.jpa.data.user.adapter.in.web;
 
 import com.example.jpa.data.user.adapter.out.persistence.UserRepository;
 import com.example.jpa.data.user.domain.User;
+import com.example.jpa.data.user.domain.UserName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +21,7 @@ public class UserController {
   @PostMapping(path = "/add")
   public @ResponseBody String addNewUser(
       @RequestParam String name, @RequestParam String email) {
-    User user = new User();
+    User user = new User(new UserName("henry"),  "henry@gmail.com");
 
     //TODO: add setter by value-object
     //TODO: need to show error log

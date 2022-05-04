@@ -6,9 +6,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 // JPA를 사용하기 위해서 Domain Entity를 정의해야 한다.
-// *(Table이나 column이 없는 상태) → rdbms 와 연결하지 않았으므로 in-memory 에 저장된다
+// * Table이나 column이 없는 상태 → rdbms 와 연결하지 않았으므로 in-memory 에 저장된다
 @Entity // This Tells Hibernate to make a table out of this class
 @Table(name = "customer")
 public class User {
@@ -17,21 +18,21 @@ public class User {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
 
-
+  @NotNull
   @Column(name = "name", nullable = false)
-  private String name;
+  private UserName name;
 
   @Column(name = "email", nullable = false)
   private String email;
 
   // JPA를 위해서 존재하는 생성자
-  public User() {
+  protected User() {
   }
 
 
   // DB에 저장할 User 인스턴스를 생성하는 생성자
   // default-value를 추가하고싶다면 builder pattern을 사용해야 한다.
-  public User(String name, String email) {
+  public User(UserName name, String email) {
     this.name = name;
     this.email = email;
 
@@ -48,10 +49,9 @@ public class User {
     return id;
   }
 
-  public String getName() {
+  public UserName getName() {
     return name;
   }
-
 
   public String getEmail() {
     return email;

@@ -2,7 +2,7 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>data</artifactId>
+  <artifactId>security</artifactId>
   <build>
     <plugins>
       <plugin>
@@ -13,55 +13,63 @@
   </build>
   <dependencies>
     <dependency>
-      <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>spring-boot-starter-web</artifactId>
       <groupId>org.springframework.boot</groupId>
     </dependency>
 
-    <dependency>
-      <artifactId>h2</artifactId>
-      <groupId>com.h2database</groupId>
-      <scope>runtime</scope>
-    </dependency>
     <dependency>
       <artifactId>spring-boot-starter-test</artifactId>
       <groupId>org.springframework.boot</groupId>
       <scope>test</scope>
     </dependency>
-<!--    <dependency>-->
-<!--      <artifactId>mysql-connector-java</artifactId>-->
-<!--      <groupId>mysql</groupId>-->
-<!--    </dependency>-->
     <dependency>
-      <artifactId>spring-boot-starter-web</artifactId>
+      <artifactId>spring-boot-starter-security</artifactId>
       <groupId>org.springframework.boot</groupId>
-      <version>2.6.6</version>
     </dependency>
     <dependency>
-      <artifactId>postgresql</artifactId>
-      <groupId>org.postgresql</groupId>
-      <version>42.3.3</version>
-    </dependency>
-    <dependency>
-      <artifactId>jakarta.validation-api</artifactId>
-      <groupId>jakarta.validation</groupId>
-      <version>2.0.2</version>
+      <artifactId>spring-security-test</artifactId>
+      <groupId>org.springframework.security</groupId>
+      <scope>test</scope>
     </dependency>
   </dependencies>
-  <description>Demo project for Spring Boot</description>
-  <groupId>com.example.jpa</groupId>
+  <description>-</description>
+  <groupId>com.example.spring</groupId>
   <modelVersion>4.0.0</modelVersion>
-  <name>data</name>
+  <name>security</name>
   <parent>
     <artifactId>spring-boot-starter-parent</artifactId>
     <groupId>org.springframework.boot</groupId>
     <relativePath/>
-    <version>2.6.7</version> <!-- lookup parent from repository -->
+    <version>2.7.0-RC1</version> <!-- lookup parent from repository -->
   </parent>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>spring-milestones</id>
+      <name>Spring Milestones</name>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <url>https://repo.spring.io/milestone</url>
+    </pluginRepository>
+  </pluginRepositories>
 
   <properties>
     <java.version>17</java.version>
   </properties>
-
+  <repositories>
+    <repository>
+      <id>spring-milestones</id>
+      <name>Spring Milestones</name>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <url>https://repo.spring.io/milestone</url>
+    </repository>
+  </repositories>
   <version>0.0.1-SNAPSHOT</version>
 
 </project>
