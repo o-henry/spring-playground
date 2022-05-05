@@ -56,4 +56,7 @@ Better still, use a dedicated migration tool, such as Flyway or Liquibase.
 # docker
 1. run docker app
 2. docker-compose up -d
+
+# implements
+implements keyword 에 alt(opt) + enter 를 입력하면 IDE가 자동 구현한다.
 ```
