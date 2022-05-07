@@ -59,4 +59,11 @@ Better still, use a dedicated migration tool, such as Flyway or Liquibase.
 
 # implements
 implements keyword 에 alt(opt) + enter 를 입력하면 IDE가 자동 구현한다.
+
+# spring-boot-admin
+admin 환경
+
+# intellij
+cmd + enter → 자동완성
+`tdd` keymap
 ```
