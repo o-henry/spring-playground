@@ -1,21 +1,25 @@
 package com.henry.starter;
 
+import com.henry.starter.controller.BoardController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.env.Environment;
 
-@SpringBootTest
-class StarterApplicationTests {
+@SpringBootTest(classes = BoardController.class, properties = {
+    "author.name=Gurum",
+    "author.age=45",
+    "author.nation=Korea"
+})
+public class PropertiesTest {
 
-  @Autowired // 어노테이션 보다 생성자 주입을 사용하자.
+  @Autowired
   Environment environment;
 
   @Test
-  public void contextLoads() {
+  public void testMethod() {
     System.out.println("이름 : " + environment.getProperty("author.name"));
     System.out.println("나이 : " + environment.getProperty("author.age"));
     System.out.println("국가 :" + environment.getProperty("author.nation"));
   }
-
 }
