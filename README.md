@@ -66,4 +66,7 @@ admin 환경
 # intellij
 cmd + enter → 자동완성
 `tdd` keymap
+
+# devtools
+서버 자동 업데이트
 ```
