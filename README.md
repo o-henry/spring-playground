@@ -64,8 +64,9 @@ implements keyword 에 alt(opt) + enter 를 입력하면 IDE가 자동 구현한
 admin 환경
 
 # intellij
-cmd + enter → 자동완성
-`tdd` keymap
+* cmd + enter → 자동완성
+* `tdd` keymap
+* cmd + p → show parameter 
 
 # devtools
 서버 자동 업데이트
