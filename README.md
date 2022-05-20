@@ -5,6 +5,10 @@
 </p>
 
 ```
+목표:
+하나의 개별 서비스 (MSA)
+
+
 # maven
 ./mvnw spring-boot:run
 
