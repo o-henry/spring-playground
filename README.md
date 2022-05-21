@@ -71,6 +71,7 @@ admin 환경
 * cmd + enter → 자동완성
 * `tdd` keymap
 * cmd + p → show parameter 
+* cmd + 7 → structure outline
 
 # devtools
 서버 자동 업데이트
