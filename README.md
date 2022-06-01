@@ -5,10 +5,6 @@
 </p>
 
 ```
-목표:
-하나의 개별 서비스 (MSA)
-
-
 # maven
 ./mvnw spring-boot:run
 
@@ -72,7 +68,12 @@ admin 환경
 * `tdd` keymap
 * cmd + p → show parameter 
 * cmd + 7 → structure outline
+* cmd + d → 한줄 복사
+* control + g → 같은 단어 선택
 
 # devtools
 서버 자동 업데이트
+
+# javadoc
+mvn javadoc:javadoc
 ```
